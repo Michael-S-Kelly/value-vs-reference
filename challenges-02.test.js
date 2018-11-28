@@ -27,9 +27,8 @@ console.log(a) prints [1, 2, 3, 1]
 ------------------------------------------------------------------------------------------------ */
 
 const appendFirstToLast = (arr) => {
-  const a = [1, 2, 3];
-  appendFirstToLast(a);
-  console.log(a); //prints [1, 2, 3, 1]
+  arr.push(arr[0]);
+  console.log(appendFirstToLast);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -48,8 +47,9 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
 const addBirthYearProperty = (obj, year) => {
-  // Solution code here...
-}
+  obj.yearBorn = year;
+  console.log(addBirthYearProperty);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -65,8 +65,11 @@ console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
 const setStatusAsAuthor = (people) => {
-  // Solution code here...
-}
+  people.forEach(el => {
+    el.isAuthor = true;
+  });
+  console.log(setStatusAsAuthor);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -84,9 +87,9 @@ console.log(a) prints [1, 2, 3, 4]
 ------------------------------------------------------------------------------------------------ */
 
 const append = (arr1, arr2) => {
-  // Solution code here...
-
-}
+  arr1.push.apply(arr1, arr2);
+  console.log(append);
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
